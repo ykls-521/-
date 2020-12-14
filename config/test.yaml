@@ -1,0 +1,22 @@
+#注释
+#1- 字典类型
+---
+name: tom
+age: 20
+--- #分段
+##2- 列表
+- 10
+- 20
+- 30
+
+#3- 复杂
+#info :
+#    - 10
+#    - 20
+#    - 30
+
+##4- 模式选择
+#name: &vcode abcdefgfh324123423421 # & 定义变量
+#testMode: on
+#mode2: off
+#data: *vcode #使用变量

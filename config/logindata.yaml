@@ -1,0 +1,49 @@
+--- #登录操作  下面每一个用例是列表
+- #test_01
+  url: /sys/login #路径
+  method: POST # 请求方法
+  detail: 正常登录
+  header:
+    content-Type: application/json
+  data:
+    username: 18715036677
+    password: 18715036677
+  reps:
+    retcode: 0
+- #test_02
+  url: /sys/login #路径
+  method: POST # 请求方法
+  detail: 没有账号，有密码
+  header:
+    content-Type: application/json
+  data:
+    username: ""
+    password: 18715036677
+  reps:
+    retcode: 1
+    message: 账号不存在
+- #test_03
+  url: /sys/login #路径
+  method: POST # 请求方法
+  detail: 有账号，没有密码
+  header:
+    content-Type: application/json
+  data:
+    username: 18715036677
+    password: ""
+  reps:
+    retcode: 1
+    message: 账号或密码不正确!
+
+- #test_04
+  url: /sys/login #路径
+  method: POST # 请求方法
+  detail: 账号密码都没有
+  header:
+    content-Type: application/json
+  data:
+    username: ""
+    password: ""
+  reps:
+    retcode: 1
+    message: 账号不存在

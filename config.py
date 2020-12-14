@@ -1,0 +1,1 @@
+HOST = 'http://testbackend.huikejie.com'
